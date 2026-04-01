@@ -83,7 +83,7 @@ export function Philosophy() {
           {/* Right column - Description and Philosophy items */}
           <div className="space-y-6 lg:pt-48">
             <p className="text-muted-foreground text-lg leading-relaxed max-w-md mb-12">
-              Регино Трейд — это завод полного цикла: от приёмки сырья до доставки готового бетона на объект. Более 15 лет мы обеспечиваем строительную отрасль материалами, которым доверяют.
+              Регион Трейд — это завод полного цикла: от приёмки сырья до доставки готового бетона на объект. Более 15 лет мы обеспечиваем строительную отрасль материалами, которым доверяют.
             </p>
 
             {philosophyItems.map((item, index) => (

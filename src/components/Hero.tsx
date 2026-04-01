@@ -174,8 +174,8 @@ export function Hero() {
           {/* Статистика */}
           <div className="flex flex-wrap justify-center gap-8 mt-12">
             {[
-              { value: "15+", label: "лет на рынке" },
-              { value: "500+", label: "объектов сдано" },
+              { value: "15 мин", label: "Расчёт стоимости" },
+              { value: "5000м³", label: "поставлено бетона" },
               { value: "24/7", label: "доставка" },
             ].map((stat) => (
               <div key={stat.label} className="text-center">

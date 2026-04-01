@@ -7,7 +7,7 @@ export function Footer() {
           <div className="md:col-span-2">
             <a href="/" className="inline-block mb-6">
               <span className="text-primary font-bold text-xl tracking-wide leading-tight">
-                Регино <span className="font-light text-muted-foreground">Трейд</span>
+                Регион <span className="font-light text-muted-foreground">Трейд</span>
               </span>
             </a>
             <p className="text-muted-foreground leading-relaxed max-w-sm">
@@ -84,7 +84,7 @@ export function Footer() {
 
         {/* Bottom bar */}
         <div className="pt-8 border-t border-border flex flex-col md:flex-row md:items-center justify-between gap-4 text-sm text-muted-foreground">
-          <p>© 2025 Регино Трейд. Все права защищены.</p>
+          <p>© 2025 Регион Трейд. Все права защищены.</p>
           <div className="flex gap-6">
             <a href="#" className="hover:text-foreground transition-colors">
               Политика конфиденциальности
