@@ -8,7 +8,7 @@ const products = [
     category: "Тяжёлый бетон",
     location: "Марки М100–М500, класс B7.5–B40",
     year: "ГОСТ 7473",
-    image: "/images/hously-1.png",
+    image: "https://cdn.poehali.dev/projects/f88d1e7d-973f-4221-bb2e-99a669323bfc/bucket/1334e38a-bfd7-4d10-bec3-9a4d485a46a7.png",
   },
   {
     id: 2,
@@ -16,7 +16,7 @@ const products = [
     category: "ЖБИ",
     location: "Плиты перекрытия, фундаментные блоки, кольца",
     year: "ГОСТ 13015",
-    image: "/images/hously-2.png",
+    image: "https://cdn.poehali.dev/projects/f88d1e7d-973f-4221-bb2e-99a669323bfc/bucket/1334e38a-bfd7-4d10-bec3-9a4d485a46a7.png",
   },
   {
     id: 3,
@@ -24,7 +24,7 @@ const products = [
     category: "Растворы кладочные и штукатурные",
     location: "Марки М50–М200, подвижность П2–П4",
     year: "ГОСТ 28013",
-    image: "/images/hously-3.png",
+    image: "https://cdn.poehali.dev/projects/f88d1e7d-973f-4221-bb2e-99a669323bfc/bucket/1334e38a-bfd7-4d10-bec3-9a4d485a46a7.png",
   },
   {
     id: 4,
@@ -32,7 +32,7 @@ const products = [
     category: "Специальные смеси",
     location: "Морозостойкость F200–F300, водонепроницаемость W8",
     year: "ГОСТ 26633",
-    image: "/images/hously-4.png",
+    image: "https://cdn.poehali.dev/projects/f88d1e7d-973f-4221-bb2e-99a669323bfc/bucket/1334e38a-bfd7-4d10-bec3-9a4d485a46a7.png",
   },
 ]
 

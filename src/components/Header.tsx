@@ -34,7 +34,7 @@ export function Header() {
       <nav className="container mx-auto px-6 flex items-center justify-between md:px-[24]">
         <a href="/" className="flex items-center gap-2 group" onClick={scrollToTop}>
           <span className="text-white font-bold text-lg tracking-wide leading-tight">
-            Регино<br />
+            Регион<br />
             <span className="font-light text-blue-200 text-sm tracking-widest">ТРЕЙД</span>
           </span>
         </a>
