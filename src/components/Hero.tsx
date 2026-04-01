@@ -118,12 +118,31 @@ export function Hero() {
 
   return (
     <section id="hero" ref={heroRef} className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      <div className="absolute inset-0 z-0">
-        <img
-          src="/images/hously-background.png"
-          alt="Минималистичный архитектурный интерьер"
-          className="w-full h-full object-cover object-center"
-        />
+      {/* Синий градиентный фон */}
+      <div className="absolute inset-0 z-0 bg-gradient-to-br from-[#0a1f44] via-[#0d3272] to-[#1a5276]">
+        {/* Декоративные элементы */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-0 left-0 w-full h-full"
+            style={{
+              backgroundImage: `repeating-linear-gradient(
+                0deg,
+                transparent,
+                transparent 60px,
+                rgba(255,255,255,0.05) 60px,
+                rgba(255,255,255,0.05) 61px
+              ), repeating-linear-gradient(
+                90deg,
+                transparent,
+                transparent 60px,
+                rgba(255,255,255,0.05) 60px,
+                rgba(255,255,255,0.05) 61px
+              )`
+            }}
+          />
+        </div>
+        {/* Светящийся акцент */}
+        <div className="absolute bottom-0 right-0 w-[600px] h-[600px] rounded-full bg-blue-500/20 blur-[120px]" />
+        <div className="absolute top-0 left-0 w-[400px] h-[400px] rounded-full bg-blue-300/10 blur-[100px]" />
       </div>
 
       <div
@@ -137,30 +156,48 @@ export function Hero() {
         }}
       >
         <div className="mb-72 md:mb-60 lg:mb-80">
-          <p className="text-sm tracking-[0.3em] uppercase text-center text-secondary mb-0">{"Студия дизайна интерьеров"}</p>
+          <p className="text-sm tracking-[0.3em] uppercase text-center text-blue-200 mb-4">{"Производство бетона и ЖБИ"}</p>
 
           <h1
             ref={titleRef}
-            className="text-7xl font-medium text-balance text-center text-white mb-0 tracking-tight leading-[0.9] lg:text-8xl"
+            className="text-7xl font-medium text-balance text-center text-white mb-6 tracking-tight leading-[0.9] lg:text-8xl"
           >
-            {"Интерьеры, в которых"}
+            {"Бетон высокого"}
             <br />
-            <span className="text-orange-200">{"хочется жить"}</span>
+            <span className="text-blue-300">{"качества"}</span>
           </h1>
+
+          <p className="text-center text-white/70 text-lg max-w-2xl mx-auto mt-6 font-light">
+            Надёжный поставщик товарного бетона, ЖБИ и строительных растворов для крупных и малых объектов
+          </p>
+
+          {/* Статистика */}
+          <div className="flex flex-wrap justify-center gap-8 mt-12">
+            {[
+              { value: "15+", label: "лет на рынке" },
+              { value: "500+", label: "объектов сдано" },
+              { value: "24/7", label: "доставка" },
+            ].map((stat) => (
+              <div key={stat.label} className="text-center">
+                <div className="text-3xl font-bold text-white">{stat.value}</div>
+                <div className="text-blue-200 text-sm mt-1">{stat.label}</div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
 
       <div className="absolute inset-0 z-20 pointer-events-none">
         <img
           src="/images/hously-foreground.png"
-          alt="Мраморная кухонная столешница"
-          className="w-full h-full object-cover object-center"
+          alt=""
+          className="w-full h-full object-cover object-center opacity-0"
         />
       </div>
 
       {animationComplete && (
         <div className="absolute bottom-12 left-1/2 -translate-x-1/2 animate-bounce z-30">
-          <ArrowDown className="w-5 h-5 text-muted-foreground" />
+          <ArrowDown className="w-5 h-5 text-blue-300" />
         </div>
       )}
     </section>

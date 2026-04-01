@@ -3,23 +3,23 @@ import { HighlightedText } from "./HighlightedText"
 
 const philosophyItems = [
   {
-    title: "Пространство как эмоция",
+    title: "Контроль качества на каждом этапе",
     description:
-      "Мы проектируем не квадратные метры, а ощущения. Каждая комната должна вызывать отклик — спокойствие, вдохновение, тепло.",
+      "Мы проводим обязательные лабораторные испытания каждой партии бетона. Сертификаты качества и паспорта соответствия выдаются на каждую поставку.",
   },
   {
-    title: "Функция в основе красоты",
+    title: "Точное соблюдение рецептур",
     description:
-      "Красивый интерьер — тот, в котором удобно жить. Мы совмещаем эстетику с эргономикой, не жертвуя ни тем, ни другим.",
+      "Современное автоматизированное оборудование обеспечивает точное дозирование компонентов согласно ГОСТ. Никаких отклонений от проектных марок.",
   },
   {
-    title: "Материалы с историей",
+    title: "Надёжная логистика",
     description:
-      "Натуральный камень, дерево, текстиль — мы выбираем материалы, которые становятся лучше с годами и наполняют пространство подлинностью.",
+      "Собственный парк автобетоносмесителей позволяет доставлять бетон в нужное время с соблюдением всех требований к транспортировке смеси.",
   },
   {
-    title: "Индивидуальность клиента",
-    description: "Мы не навязываем стиль — мы слушаем. Каждый проект отражает личность владельца и его образ жизни, а не тренды.",
+    title: "Долгосрочное партнёрство",
+    description: "Мы строим отношения, а не разовые сделки. Постоянным клиентам — персональный менеджер, приоритетные заявки и гибкие условия оплаты.",
   },
 ]
 
@@ -55,24 +55,35 @@ export function Philosophy() {
           <div className="lg:sticky lg:top-32 lg:self-start">
             <p className="text-muted-foreground text-sm tracking-[0.3em] uppercase mb-6">Наш подход</p>
             <h2 className="text-6xl md:text-6xl font-medium leading-[1.15] tracking-tight mb-6 text-balance lg:text-8xl">
-              Дизайн с
+              Бетон с
               <br />
-              <HighlightedText>душой</HighlightedText>
+              <HighlightedText>гарантией</HighlightedText>
             </h2>
 
-            <div className="relative hidden lg:block">
-              <img
-                src="/images/exterior.png"
-                alt="Интерьер студии дизайна"
-                className="opacity-90 relative z-10 w-auto"
-              />
+            {/* Визуальный элемент вместо фото */}
+            <div className="relative hidden lg:block mt-8">
+              <div className="bg-primary rounded-2xl p-8 text-white">
+                <div className="grid grid-cols-2 gap-6">
+                  {[
+                    { value: "М100–М500", label: "Марки бетона" },
+                    { value: "100 м³/ч", label: "Производительность" },
+                    { value: "< 2 часов", label: "Время доставки" },
+                    { value: "ISO 9001", label: "Сертификация" },
+                  ].map((item) => (
+                    <div key={item.label} className="border-l-2 border-blue-400 pl-4">
+                      <div className="text-xl font-bold text-blue-200">{item.value}</div>
+                      <div className="text-sm text-white/70 mt-1">{item.label}</div>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
 
           {/* Right column - Description and Philosophy items */}
           <div className="space-y-6 lg:pt-48">
             <p className="text-muted-foreground text-lg leading-relaxed max-w-md mb-12">
-              Интерьер — это не декор, это среда, в которой проходит жизнь. Мы создаём пространства, где каждая деталь работает на ваш комфорт и настроение.
+              Регино Трейд — это завод полного цикла: от приёмки сырья до доставки готового бетона на объект. Более 15 лет мы обеспечиваем строительную отрасль материалами, которым доверяют.
             </p>
 
             {philosophyItems.map((item, index) => (

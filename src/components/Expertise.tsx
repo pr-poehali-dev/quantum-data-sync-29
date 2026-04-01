@@ -1,30 +1,30 @@
 import { useEffect, useRef, useState } from "react"
-import { Home, Building, Armchair, Trees } from "lucide-react"
+import { Truck, FlaskConical, ClipboardCheck, Headphones } from "lucide-react"
 import { HighlightedText } from "./HighlightedText"
 
 const expertiseAreas = [
   {
-    title: "Жилая архитектура",
-    description: "Создаем дома, которые сочетают красоту с комфортом, где каждое пространство служит и форме, и функции.",
-    icon: Home,
+    title: "Производство и доставка",
+    description: "Собственный парк автобетоносмесителей объёмом 6–10 м³. Доставка в течение 90 минут в радиусе 100 км от завода. Работаем 24/7.",
+    icon: Truck,
   },
   {
-    title: "Коммерческие объекты",
+    title: "Лабораторный контроль",
     description:
-      "Проектируем рабочие пространства, которые вдохновляют на продуктивность и отражают ценности передовых организаций.",
-    icon: Building,
+      "Аккредитованная лаборатория на площадке завода. Испытания каждой партии по прочности, подвижности, морозостойкости и водонепроницаемости.",
+    icon: FlaskConical,
   },
   {
-    title: "Дизайн интерьеров",
+    title: "Подбор состава и проектирование",
     description:
-      "Создаем интерьеры, которые гармонируют с архитектурной оболочкой, формируя целостный пространственный опыт.",
-    icon: Armchair,
+      "Разработка индивидуальных рецептур под требования объекта. Технологическое сопровождение при укладке и уходе за бетонной смесью.",
+    icon: ClipboardCheck,
   },
   {
-    title: "Градостроительство",
+    title: "Сервис и поддержка",
     description:
-      "Формируем сообщества через продуманную интеграцию общественных пространств, зданий и природных элементов.",
-    icon: Trees,
+      "Персональный менеджер, оперативное согласование заявок, гибкие условия оплаты. Работаем с физическими и юридическими лицами.",
+    icon: Headphones,
   },
 ]
 
@@ -59,12 +59,12 @@ export function Expertise() {
         <div className="max-w-3xl mb-20">
           <p className="text-muted-foreground text-sm tracking-[0.3em] uppercase mb-6">Наши услуги</p>
           <h2 className="text-6xl font-medium leading-[1.15] tracking-tight mb-6 text-balance lg:text-8xl">
-            <HighlightedText>Экспертиза</HighlightedText>, отточенная
+            <HighlightedText>Сервис</HighlightedText>, который
             <br />
-            практикой
+            работает
           </h2>
           <p className="text-muted-foreground text-lg leading-relaxed">
-            Каждый проект опирается на десятилетия совокупного опыта, создавая архитектуру, которая одновременно инновационна и вневременна.
+            От оформления заявки до выгрузки на объекте — каждый шаг выстроен так, чтобы вы могли строить без остановок и задержек.
           </p>
         </div>
 
@@ -78,8 +78,8 @@ export function Expertise() {
                   itemRefs.current[index] = el
                 }}
                 data-index={index}
-                className={`relative pl-8 border-l border-border transition-all duration-700 ${
-                  visibleItems.includes(index) ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+                className={`relative pl-8 border-l-2 border-primary/30 transition-all duration-700 ${
+                  visibleItems.includes(index) ? "opacity-100 translate-y-0 border-primary" : "opacity-0 translate-y-6"
                 }`}
                 style={{ transitionDelay: `${index * 150}ms` }}
               >
@@ -91,7 +91,7 @@ export function Expertise() {
                     transitionDelay: `${index * 150}ms`,
                   }}
                 >
-                  <Icon className="w-10 h-10 mb-4 text-foreground" strokeWidth={1.25} />
+                  <Icon className="w-10 h-10 mb-4 text-primary" strokeWidth={1.25} />
                 </div>
                 <h3 className="text-xl font-medium mb-4">{area.title}</h3>
                 <p className="text-muted-foreground leading-relaxed">{area.description}</p>

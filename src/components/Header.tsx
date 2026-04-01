@@ -33,21 +33,24 @@ export function Header() {
     >
       <nav className="container mx-auto px-6 flex items-center justify-between md:px-[24]">
         <a href="/" className="flex items-center gap-2 group" onClick={scrollToTop}>
-          <img src="/images/hously-logo.svg" alt="Пространство" width={120} height={32} className="w-auto h-6" />
+          <span className="text-white font-bold text-lg tracking-wide leading-tight">
+            Регино<br />
+            <span className="font-light text-blue-200 text-sm tracking-widest">ТРЕЙД</span>
+          </span>
         </a>
 
         <ul className="hidden md:flex items-center gap-10 text-sm tracking-wide">
           {[
             { label: "Главная", href: "#hero" },
             { label: "О нас", href: "#about" },
-            { label: "Портфолио", href: "#projects" },
+            { label: "Продукция", href: "#projects" },
             { label: "Услуги", href: "#services" },
             { label: "FAQ", href: "#faq" },
           ].map((item) => (
             <li key={item.label}>
               <a
                 href={item.href}
-                className="hover:text-[rgb(251,146,60)] transition-colors duration-300 relative after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 hover:after:w-full after:bg-[rgb(251,146,60)] after:transition-all after:duration-300 text-white"
+                className="hover:text-blue-300 transition-colors duration-300 relative after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 hover:after:w-full after:bg-blue-300 after:transition-all after:duration-300 text-white"
               >
                 {item.label}
               </a>
@@ -60,8 +63,8 @@ export function Header() {
           className={cn(
             "hidden md:inline-flex items-center gap-2 text-sm px-5 py-2.5 transition-all duration-300",
             scrolled
-              ? "bg-white text-foreground border border-foreground/20 hover:bg-foreground hover:text-white"
-              : "bg-white text-foreground border border-foreground/20 hover:bg-foreground hover:text-white",
+              ? "bg-white text-primary border border-primary/20 hover:bg-primary hover:text-white"
+              : "bg-white text-primary border border-primary/20 hover:bg-primary hover:text-white",
           )}
         >
           Связаться
@@ -97,14 +100,14 @@ export function Header() {
             {[
               { label: "Главная", href: "#hero" },
               { label: "О нас", href: "#about" },
-              { label: "Портфолио", href: "#projects" },
+              { label: "Продукция", href: "#projects" },
               { label: "Услуги", href: "#services" },
               { label: "FAQ", href: "#faq" },
             ].map((item) => (
               <li key={item.label}>
                 <a
                   href={item.href}
-                  className="hover:text-[rgb(251,146,60)] transition-colors duration-300 text-white text-4xl font-light block"
+                  className="hover:text-blue-300 transition-colors duration-300 text-white text-4xl font-light block"
                   onClick={closeMobileMenu}
                 >
                   {item.label}
@@ -115,7 +118,7 @@ export function Header() {
 
           <a
             href="#contact"
-            className="inline-flex items-center justify-center gap-2 text-sm px-5 py-2.5 bg-white text-foreground border border-foreground/20 hover:bg-foreground hover:text-white transition-all duration-300 mb-4"
+            className="inline-flex items-center justify-center gap-2 text-sm px-5 py-2.5 bg-white text-primary border border-primary/20 hover:bg-primary hover:text-white transition-all duration-300 mb-4"
             onClick={closeMobileMenu}
           >
             Связаться
